@@ -33,3 +33,12 @@ header.c-header {
   position: absolute;
   z-index: 1;
 }
+
+.c-header__name {
+  font-size: 8.4rem;
+  font-family: "League Script";
+}
+
+.c-header__desc {
+  margin: 20px 0 0;
+}

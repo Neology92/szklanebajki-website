@@ -14,7 +14,19 @@ const Header = () => (
           </div>
         </div>
       </div>
-      <div className="col col-8">a</div>
+      <div className="col col-8">
+        <div className="row">
+          <div className="col col-6 c-header__name">Sandra</div>
+          <div className="col col-6 c-header__name">Dyrka</div>
+        </div>
+        <div className="row">
+          <div className="col col-12 c-header__desc">
+            Kompozycje w szkle to nie tylko sposób na zarobek, ale również moja
+            pasja i mój wkład w sztukę. Na każdy kolejny szukam osobnej
+            inspiracji i przez każdy chcę przekazać inną bajkę.
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 )

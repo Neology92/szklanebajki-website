@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "../assets/styles/fontLeagueScript.css"
+import "../assets/styles/global.scss"
 import "bootstrap-4-grid"
 
 const Layout = ({ children }) => {
