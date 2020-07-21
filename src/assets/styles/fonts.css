@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "League Script";
+  font-style: normal;
+  src: url("../fonts/LeagueScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sahitya";
+  font-style: bold;
+  src: url("../fonts/Sahitya-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sahitya";
+  font-style: normal;
+  src: url("../fonts/Sahitya-Regular.ttf") format("truetype");
+}
