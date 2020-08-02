@@ -23,8 +23,7 @@ const MainHeader = () => (
 const Wrapper = styled.header`
   padding: 4rem 3rem 0.5rem;
   height: 44rem;
-  width: 95%;
-  margin: 1rem auto;
+  width: 100%;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 

@@ -10,7 +10,6 @@ const PhotosGrid = () => {
 
   return (
     <Grid>
-      {console.log(glasses)}
       {glasses.map(glass => (
         <Photo
           title={glass.title}

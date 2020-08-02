@@ -1,16 +1,21 @@
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import React from "react"
 import PropTypes from "prop-types"
 
 import { MainHeader } from "../components"
+import { theme } from "../assets/styles/theme"
 import "../assets/styles/fonts.css"
 import "../assets/styles/global.css"
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <MainHeader />
-      <Main>{children}</Main>
+      <ThemeProvider theme={theme}>
+        <Main>
+          <MainHeader />
+          <>{children}</>
+        </Main>
+      </ThemeProvider>
     </>
   )
 }
@@ -18,6 +23,11 @@ const MainLayout = ({ children }) => {
 const Main = styled.main`
   width: 95%;
   margin: 0 auto;
+
+  ${({ theme }) => theme.media.above.l} {
+    width: 94rem;
+    margin: 0 auto;
+  }
 `
 
 MainLayout.propTypes = {
