@@ -1,5 +1,5 @@
-import Header from "./Header/Header"
-import Image from "./Image"
+import MainHeader from "./MainHeader"
+import PhotosGrid from "./PhotosGrid"
 import SEO from "./seo"
 
-export { Header, Image, SEO }
+export { MainHeader, PhotosGrid, SEO }

@@ -2,14 +2,14 @@ import styled from "styled-components"
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Header } from "../components"
+import { MainHeader } from "../components"
 import "../assets/styles/fonts.css"
 import "../assets/styles/global.css"
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <Header />
+      <MainHeader />
       <Main>{children}</Main>
     </>
   )
