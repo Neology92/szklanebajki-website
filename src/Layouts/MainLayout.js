@@ -16,7 +16,7 @@ const MainLayout = ({ children }) => {
 }
 
 const Main = styled.main`
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 `
 
