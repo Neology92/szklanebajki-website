@@ -21,7 +21,7 @@ const MainHeader = () => (
 )
 
 const Wrapper = styled.header`
-  padding: 3rem;
+  padding: 4rem 3rem 0.5rem;
   height: 44rem;
   width: 95%;
   margin: 1rem auto;
