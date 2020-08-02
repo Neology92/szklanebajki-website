@@ -1,6 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { ProfileImage, TextHeading, Paragraph } from "../elements"
+import {
+  ProfileImage,
+  TextHeading,
+  Paragraph,
+  ContactFooter,
+} from "../elements"
 
 const MainHeader = () => (
   <Wrapper>
@@ -11,14 +16,22 @@ const MainHeader = () => (
       i mój wkład w sztukę. Na każdy kolejny szukam osobnej inspiracji i przez
       każdy chcę przekazać inną bajkę.
     </Paragraph>
+    <ContactFooter />
   </Wrapper>
 )
 
-const Wrapper = styled.div`
-  padding: 40px 10rem;
-  height: 300px;
-  background: #fbfbfb;
+const Wrapper = styled.header`
+  padding: 3rem;
+  height: 44rem;
+  width: 95%;
+  margin: 1rem auto;
+  background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `
 
 export default MainHeader

@@ -7,22 +7,22 @@ const ProfileImage = () => {
   return (
     <Wrapper>
       <Inner>
-        <Image />
+        <Image critical />
       </Inner>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  width: 220px;
-  height: 220px;
+  width: 12rem;
+  height: 12rem;
   border-radius: 100%;
   position: relative;
 
   &::after {
     content: "";
-    width: 224px;
-    height: 224px;
+    width: 12.2rem;
+    height: 12.2rem;
     border-radius: 100%;
     background: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -45,7 +45,7 @@ const Inner = styled.div`
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile-photo.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "profile.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 220) {
             ...GatsbyImageSharpFluid
