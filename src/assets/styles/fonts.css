@@ -1,17 +1,83 @@
 @font-face {
-  font-family: "League Script";
+  font-family: "Mali";
   font-style: normal;
-  src: url("../fonts/LeagueScript-Regular.ttf") format("truetype");
+  font-weight: 200;
+  src: url("../fonts/Mali-ExtraLight.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Sahitya";
-  font-style: bold;
-  src: url("../fonts/Sahitya-Bold.ttf") format("truetype");
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/Mali-ExtraLightItalic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Sahitya";
+  font-family: "Mali";
   font-style: normal;
-  src: url("../fonts/Sahitya-Regular.ttf") format("truetype");
+  font-weight: 300;
+  src: url("../fonts/Mali-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Mali-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Mali-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Mali-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Mali-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/Mali-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Mali-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/Mali-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Mali-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Mali-BoldItalic.ttf") format("truetype");
 }
