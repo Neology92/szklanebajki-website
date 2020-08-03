@@ -11,16 +11,16 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Main>
+        <Container>
           <MainHeader />
-          <>{children}</>
-        </Main>
+          <main>{children}</main>
+        </Container>
       </ThemeProvider>
     </>
   )
 }
 
-const Main = styled.main`
+const Container = styled.div`
   width: 95%;
   margin: 0 auto;
 

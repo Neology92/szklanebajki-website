@@ -27,8 +27,12 @@ const Grid = styled.div`
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-gap: 1rem;
+
+  ${({ theme }) => theme.media.above.m} {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
 `
 
 const glassesQuery = graphql`

@@ -6,5 +6,9 @@ const TextHeading = styled.h2`
   color: #525252;
   margin: 0;
   text-align: center;
+
+  ${({ theme }) => theme.media.above.m} {
+    text-align: left;
+  }
 `
 export default TextHeading

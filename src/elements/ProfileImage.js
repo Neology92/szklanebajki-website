@@ -14,23 +14,12 @@ const ProfileImage = () => {
 }
 
 const Wrapper = styled.div`
-  width: 12rem;
-  height: 12rem;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
   position: relative;
-
-  &::after {
-    content: "";
-    width: 12.2rem;
-    height: 12.2rem;
-    border-radius: 100%;
-    background: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    position: absolute;
-    top: -1px;
-    left: -2px;
-  }
+  border: 3px solid white;
+  box-shadow: ${({ theme }) => theme.shadow.strong};
 `
 
 const Inner = styled.div`
