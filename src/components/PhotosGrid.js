@@ -1,24 +1,53 @@
 import styled from "styled-components"
-import React from "react"
+import React, { useState } from "react"
 import { Photo } from "../elements"
 import { graphql, useStaticQuery } from "gatsby"
 
+import PhotoModal from "./PhotoModal"
+import Portal from "./Portal"
+
 const PhotosGrid = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const [glassData, setGlassData] = useState({
+    title: "",
+    story: "",
+    photo: { url: "" },
+  })
+
+  const openModalWith = glass => {
+    setGlassData(glass)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+  }
+
   const {
     gcms: { glasses },
   } = useStaticQuery(glassesQuery)
 
   return (
-    <Grid>
-      {glasses.map(glass => (
-        <Photo
-          title={glass.title}
-          story={glass.story}
-          imgUrl={glass.photo.url}
-          key={glass.id}
+    <>
+      <Portal>
+        <PhotoModal
+          isOpen={modalOpen}
+          glassData={glassData}
+          close={closeModal}
         />
-      ))}
-    </Grid>
+      </Portal>
+      <Grid>
+        {glasses.map(glass => (
+          <Photo
+            title={glass.title}
+            story={glass.story}
+            imgUrl={glass.photo.url}
+            key={glass.id}
+            onClick={() => openModalWith(glass)}
+          />
+        ))}
+      </Grid>
+    </>
   )
 }
 

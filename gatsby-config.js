@@ -17,7 +17,6 @@ module.exports = {
           "https://api-eu-central-1.graphcms.com/v2/ckdd2k21jeyel01xw4lh67rwk/master",
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +24,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: "portal",
+        id: "portal",
+      },
+    },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   border-radius: 100%;
   position: relative;
   border: 3px solid white;
-  box-shadow: ${({ theme }) => theme.shadow.strong};
+  box-shadow: ${({ theme }) => theme.shadow.blurred};
 `
 
 const Inner = styled.div`
