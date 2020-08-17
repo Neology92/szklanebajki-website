@@ -2,17 +2,23 @@ import { useEffect } from "react"
 import ReactDOM from "react-dom"
 
 function Portal({ children }) {
-  const portalRoot = document.getElementById("portal")
-  let El = document.createElement("div")
+  const portalRoot =
+    typeof document !== `undefined` ? document.getElementById("portal") : null
+  const El =
+    typeof document !== `undefined` ? document.createElement("div") : null
 
-  // useEffect(() => {
-  //   portalRoot.appendChild(El)
-  //   // return () => {
-  //   // portalRoot.removeChild(El)
-  //   // }
-  // }, [])
+  useEffect(() => {
+    portalRoot.appendChild(El)
+    return () => {
+      portalRoot.removeChild(El)
+    }
+  }, [])
 
-  return ReactDOM.createPortal(children, portalRoot)
+  if (El) {
+    return ReactDOM.createPortal(children, portalRoot)
+  } else {
+    return null
+  }
 }
 
 export default Portal

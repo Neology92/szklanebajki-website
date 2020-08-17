@@ -33,7 +33,7 @@ const PhotoModal = ({ isOpen, glassData, close }) => {
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   width: calc(100% - 1rem);
-  min-height: 95rem;
+  min-height: 105rem;
   padding: 1rem 1.5rem;
 
   display: flex;

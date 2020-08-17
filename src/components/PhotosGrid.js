@@ -67,7 +67,7 @@ const Grid = styled.div`
 const glassesQuery = graphql`
   {
     gcms {
-      glasses {
+      glasses(orderBy: createdAt_DESC) {
         id
         title
         story
