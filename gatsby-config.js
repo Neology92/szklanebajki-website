@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-176091487-1",
+      },
+    },
+    {
       resolve: "gatsby-source-graphql",
       options: {
         // Arbitrary name for the remote schema Query type
