@@ -33,7 +33,7 @@ const PhotoModal = ({ isOpen, glassData, close }) => {
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   width: calc(100% - 1rem);
-  min-height: 105rem;
+  height: fit-content;
   padding: 1rem 1.5rem;
 
   display: flex;
@@ -44,7 +44,20 @@ const Wrapper = styled.div`
   top: 0.5rem;
   left: 0.5rem;
 
-  z-index: 99999;
+  z-index: 1;
+
+  & > div {
+    margin-top: 15px;
+  }
+
+  & > p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  & > img {
+    margin-top: 20px;
+  }
 `
 
 const Backdrop = styled.div`
@@ -56,8 +69,6 @@ const Backdrop = styled.div`
 
   background: ${({ theme }) => theme.color.black};
   opacity: 0.6;
-
-  z-index: 99998;
 `
 
 const Img = styled.img`
