@@ -1,5 +1,6 @@
-import styled from "styled-components"
 import React from "react"
+import styled from "styled-components"
+import GraphImg from "graphcms-image"
 
 import {
   ContactFooter,
@@ -9,7 +10,7 @@ import {
   HeadingBanner,
 } from "../elements"
 
-const PhotoModal = ({ isOpen, glassData, close, scrollPosition }) => {
+const PhotoModal = ({ isOpen, glassData, maxWidth, close, scrollPosition }) => {
   return (
     <>
       {isOpen && (
@@ -20,7 +21,9 @@ const PhotoModal = ({ isOpen, glassData, close, scrollPosition }) => {
             <HeadingBanner className="heading">
               <TextHeading>{glassData.title}</TextHeading>
             </HeadingBanner>
-            <Img src={glassData.photo.url} className="photo" />
+            <div className="photo">
+              <GraphImg image={glassData.photo} maxWidth={maxWidth} />
+            </div>
             <Paragraph className="story">{glassData.story}</Paragraph>
             <ContactFooter classaName="footer" />
           </Wrapper>

@@ -1,11 +1,12 @@
-import styled from "styled-components"
 import React from "react"
+import styled from "styled-components"
+import GraphImg from "graphcms-image"
 
-const Photo = ({ title, story, imgUrl, onClick }) => {
+const Photo = ({ title, photo, onClick, maxWidth }) => {
   return (
     <>
       <Wrapper onClick={onClick}>
-        <img src={imgUrl}></img>
+        <GraphImg image={photo} maxWidth={maxWidth} />
         <ImgTitle>{title}</ImgTitle>
       </Wrapper>
     </>

@@ -11,7 +11,7 @@ const PhotosGrid = () => {
   const [glassData, setGlassData] = useState({
     title: "",
     story: "",
-    photo: { url: "" },
+    photo: {},
   })
   const [scrollPosition, setScrollPosition] = useState(0)
 
@@ -35,6 +35,7 @@ const PhotosGrid = () => {
         <PhotoModal
           isOpen={modalOpen}
           glassData={glassData}
+          maxWidth={675}
           close={closeModal}
           scrollPosition={scrollPosition}
         />
@@ -43,8 +44,8 @@ const PhotosGrid = () => {
         {glasses.map(glass => (
           <Photo
             title={glass.title}
-            story={glass.story}
-            imgUrl={glass.photo.url}
+            photo={glass.photo}
+            maxWidth={200}
             key={glass.id}
             onClick={() => openModalWith(glass)}
           />
@@ -76,6 +77,9 @@ const glassesQuery = graphql`
         title
         story
         photo {
+          handle
+          width
+          height
           url
         }
       }
