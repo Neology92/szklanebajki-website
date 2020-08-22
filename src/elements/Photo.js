@@ -13,8 +13,6 @@ const Photo = ({ title, story, imgUrl, onClick }) => {
 }
 
 const Wrapper = styled.div`
-  height: fit-content;
-  width: fit-content;
   position: relative;
   cursor: pointer;
 
@@ -24,6 +22,7 @@ const Wrapper = styled.div`
 
   border: 5px solid ${({ theme }) => theme.color.white};
   box-shadow: ${({ theme }) => theme.shadow.blurred};
+  background: ${({ theme }) => theme.color.white};
 
   ${({ theme }) => theme.media.above.s} {
     border: 1vw solid ${({ theme }) => theme.color.white};
@@ -31,10 +30,10 @@ const Wrapper = styled.div`
 
   ${({ theme }) => theme.media.above.l} {
     border: 10px solid ${({ theme }) => theme.color.white};
-  }
 
-  &:hover span {
-    opacity: 1;
+    &:hover span {
+      opacity: 1;
+    }
   }
 `
 
@@ -50,6 +49,8 @@ const ImgTitle = styled.span`
   width: 100%;
   height: 110px;
   padding: 15px;
+
+  bottom: 3px;
 
   background: ${({ theme }) => `${theme.color.black}99`};
   opacity: 0;
