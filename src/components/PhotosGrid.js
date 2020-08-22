@@ -13,8 +13,10 @@ const PhotosGrid = () => {
     story: "",
     photo: { url: "" },
   })
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   const openModalWith = glass => {
+    setScrollPosition(window.scrollY)
     setGlassData(glass)
     setModalOpen(true)
   }
@@ -34,6 +36,7 @@ const PhotosGrid = () => {
           isOpen={modalOpen}
           glassData={glassData}
           close={closeModal}
+          scrollPosition={scrollPosition}
         />
       </Portal>
       <Grid>

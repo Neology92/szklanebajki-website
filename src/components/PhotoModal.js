@@ -9,13 +9,13 @@ import {
   HeadingBanner,
 } from "../elements"
 
-const PhotoModal = ({ isOpen, glassData, close }) => {
+const PhotoModal = ({ isOpen, glassData, close, scrollPosition }) => {
   return (
     <>
       {isOpen && (
         <>
           <Backdrop onClick={close} />
-          <Wrapper>
+          <Wrapper scrollPosition={scrollPosition}>
             <ReturnButton onClick={close} />
             <HeadingBanner className="heading">
               <TextHeading>{glassData.title}</TextHeading>
@@ -36,12 +36,14 @@ const Wrapper = styled.div`
   height: fit-content;
   padding: 1rem 1.5rem;
 
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   position: absolute;
-  top: 0.5rem;
+  top: ${({ scrollPosition }) => `${scrollPosition}px`};
   left: 0.5rem;
 
   z-index: 1;
@@ -64,7 +66,7 @@ const Wrapper = styled.div`
     width: 80%;
 
     left: 10%;
-    top: 5rem;
+    top: ${({ scrollPosition }) => `calc(5rem + ${scrollPosition}px)`};
 
     & > div {
       margin-top: 25px;
@@ -85,7 +87,9 @@ const Wrapper = styled.div`
     height: fit-content;
     padding: 4rem 4rem;
 
+    position: fixed;
     left: calc(50% - 460px);
+    top: 5rem;
 
     display: grid;
     grid-template-columns: 370px 420px;
@@ -130,6 +134,8 @@ const Backdrop = styled.div`
   height: 100%;
   top: 0;
   left: 0;
+
+  z-index: 1;
 
   background: ${({ theme }) => theme.color.black};
   opacity: 0.6;
