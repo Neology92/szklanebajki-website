@@ -22,7 +22,7 @@ const PhotoModal = ({ isOpen, glassData, maxWidth, close, scrollPosition }) => {
               <TextHeading>{glassData.title}</TextHeading>
             </HeadingBanner>
             <div className="photo">
-              <GraphImg image={glassData.photo} maxWidth={maxWidth} />
+              <GraphImg image={glassData.photo} maxWidth={maxWidth} withWebp />
             </div>
             <Paragraph className="story">{glassData.story}</Paragraph>
             <ContactFooter classaName="footer" />

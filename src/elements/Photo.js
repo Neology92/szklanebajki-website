@@ -6,7 +6,12 @@ const Photo = ({ title, photo, onClick, maxWidth }) => {
   return (
     <>
       <Wrapper onClick={onClick}>
-        <GraphImg image={photo} maxWidth={maxWidth} />
+        <GraphImg
+          image={photo}
+          maxWidth={maxWidth}
+          withWebp
+          blurryPlaceholder={false}
+        />
         <ImgTitle>{title}</ImgTitle>
       </Wrapper>
     </>
