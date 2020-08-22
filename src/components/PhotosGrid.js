@@ -55,6 +55,7 @@ const PhotosGrid = () => {
 }
 
 const Grid = styled.div`
+  overflow: hidden;
   margin-top: 6rem;
 
   display: grid;
