@@ -26,6 +26,10 @@ const ArrowButton = styled.button`
 
   border: 1px solid ${({ theme }) => theme.color.black};
   border-radius: 50px;
+
+  ${({ theme }) => theme.media.above.l} {
+    display: none;
+  }
 `
 
 export default ReturnButton
