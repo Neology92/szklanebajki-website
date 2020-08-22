@@ -6,7 +6,7 @@ const Paragraph = styled.p`
   text-align: center;
 
   ${({ theme }) => theme.media.above.m} {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: justify;
   }
 `
