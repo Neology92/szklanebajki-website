@@ -14,8 +14,8 @@ const ContactFooter = () => {
           sandradyrka1@gmail.com
         </Email>
         <IconsWrapper>
-          <Icon path={ig} link={"https://www.instagram.com/"} />
-          <Icon path={fb} link={"https://www.facebook.com/"} />
+          <Icon path={ig} link={"https://www.instagram.com/szklane.bajki/"} />
+          <Icon path={fb} link={"https://www.facebook.com/SzklaneBajki/"} />
         </IconsWrapper>
       </Info>
     </Wrapper>

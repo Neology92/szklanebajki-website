@@ -4,7 +4,7 @@ import React from "react"
 const Icon = ({ path, link }) => {
   return (
     <Wrapper>
-      <a href={link}>
+      <a href={link} target="_blank" noreferrer noopener>
         <Img src={path}></Img>
       </a>
     </Wrapper>
