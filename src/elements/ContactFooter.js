@@ -33,6 +33,10 @@ const Info = styled.address`
   width: 100%;
   margin-top: 0.6rem;
   margin-bottom: 0.8rem;
+
+  ${({ theme }) => theme.media.above.m} {
+    justify-content: flex-end;
+  }
 `
 
 const Email = styled.a`
@@ -43,6 +47,10 @@ const Email = styled.a`
   display: flex;
   align-items: center;
   line-height: 100%;
+
+  ${({ theme }) => theme.media.above.m} {
+    font-size: 1.4rem;
+  }
 `
 const IconsWrapper = styled.div`
   display: flex;
