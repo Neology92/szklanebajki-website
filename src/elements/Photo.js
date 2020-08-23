@@ -56,8 +56,6 @@ const ImgTitle = styled.span`
   height: 110px;
   padding: 15px;
 
-  bottom: 3px;
-
   background: ${({ theme }) => `${theme.color.black}99`};
   opacity: 0;
 
